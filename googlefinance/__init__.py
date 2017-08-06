@@ -34,11 +34,11 @@ googleFinanceKeyToFullName = {
 def buildUrl(symbols):
     symbol_list = ','.join([symbol for symbol in symbols])
     # a deprecated but still active & correct api
-    return 'http://finance.google.com/finance/info?client=ig&q=' \
+    return 'https://finance.google.com/finance/info?client=ig&q=' \
         + symbol_list
 
 def buildNewsUrl(symbol, qs='&start=0&num=1000'):
-   return 'http://www.google.com/finance/company_news?output=json&q=' \
+   return 'https://www.google.com/finance/company_news?output=json&q=' \
         + symbol + qs
 
 def request(symbols):
